@@ -1,0 +1,7 @@
+{
+  "name": "PedidosRestaurante",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
