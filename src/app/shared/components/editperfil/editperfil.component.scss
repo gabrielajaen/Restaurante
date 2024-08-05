@@ -1,0 +1,115 @@
+/* Estilo para el ion-content con imagen de fondo */
+
+
+/* Estilo para el ion-toolbar */
+
+ion-toolbar {
+    --background: #facc37;
+    color: #000;
+}
+
+.readonly-input {
+    color: rgb(70, 67, 67);
+    /* Cambia el color del texto a plomo (gris) */
+}
+
+
+/* Opcional: Puedes agregar un estilo adicional para hacer más evidente que es un campo de solo lectura */
+
+form {
+    border-radius: 20px;
+}
+
+
+/* Estilo para el ion-avatar */
+
+ion-avatar {
+    width: 130px;
+    height: 130px;
+    margin-top: 20px;
+}
+
+
+/* Estilo para la clase col */
+
+.col {
+    --background: rgb(248, 184, 46);
+    color: black;
+    font-size: 16px;
+    margin-top: -15px;
+}
+
+.empty-icon {
+    font-size: 140px;
+    opacity: 30%;
+}
+
+
+/* Estilo para el contenedor de imagen de perfil y botón */
+
+.imagen-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Estilo para los ion-item */
+
+ion-item {
+    --background: #bed9ec;
+    --ion-background-color: #bed9ec;
+    --inner-background: #bed9ec;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* Estilo para el botón */
+
+.boton {
+    --background: #facc37;
+    color: #000;
+    margin: 10px auto;
+    width: 200px;
+    font-size: 18px;
+    margin-left: 60px;
+}
+
+
+/* Estilo para el contenedor con fondo y sombra */
+
+.colores {
+    background-color: #bed9ec;
+    margin-top: -80px;
+    margin-bottom: 0px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilo para el texto */
+
+.text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-wrapper {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/184/721/non_2x/abstract-geometric-shapes-background-free-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    font-size: 20px;
+}

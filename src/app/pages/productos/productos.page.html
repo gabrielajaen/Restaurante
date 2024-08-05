@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button style="font-size: 30px;"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Productos</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <!-- <div>
+        <ion-img src="https://img.freepik.com/fotos-premium/foto-mesa-llena-comidas-deliciosas-sabrosas_763111-15796.jpg"></ion-img>
+    </div> -->
+
+
+    <div class="buscar">
+        <!-- BUSCAR -->
+        <ion-grid>
+            <ion-row>
+                <ion-col size="3">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3577/3577429.png" alt="">
+
+                </ion-col>
+                <ion-col size="9">
+                    <h1 *ngIf="isAuthenticated && user">Hola, {{user.nombre}} !</h1>
+                    <h2>Selecicona los platos que quieras comprar</h2>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+
+    </div>
+
+    <app-buscar (search)="buscarProductos($event)"></app-buscar>
+
+    <!-- CATEGORIAS -->
+    <div class="categories">
+        <app-categorias *ngFor="let item of categorias" [item]="item" (categoriaSeleccionada)="onCategorySelected($event)">
+        </app-categorias>
+    </div>
+
+    <!-- PRODUCTOS -->
+    <!-- PRODUCTOS -->
+    <h1 class="list-header">Productos </h1>
+    <div class="food-list">
+        <app-platos *ngFor="let food of filteredPlatos" [item]="food" (clicked)="verDetalle(food.id)"></app-platos>
+    </div>
+</ion-content>
+
+<app-wss></app-wss>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-footer>

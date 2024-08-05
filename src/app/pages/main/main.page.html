@@ -1,0 +1,28 @@
+<!-- main.page.html -->
+<ion-menu contentId="menu-content" menuId="menu-content" side="start">
+    <app-header title="Menú"></app-header>
+    <ion-content class="ion-text-center">
+        <ion-avatar>
+            <img *ngIf="(userImage$ | async)" [src]="userImage$ | async" />
+            <ion-icon *ngIf="!(userImage$ | async)" class="empty-icon" name="person-circle-outline"></ion-icon>
+        </ion-avatar>
+        <h4>{{user()?.nombre}}</h4>
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+            <ion-item [ngClass]="{'active' : currentpath === p.url}" (click)="handleMenuItemClick(p.url)" routerDirection="root" detail>
+                <ion-icon class="icono" slot="start" [name]="p.icon"></ion-icon>
+                <ion-label class="titulo">{{p.title}}</ion-label>
+            </ion-item>
+        </ion-menu-toggle>
+    </ion-content>
+
+    <ion-footer class="custom-footer">
+        <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="handleMenuItemClick('/home')" lines="none">
+                <ion-icon class="icono" slot="start" name="log-out-outline"></ion-icon>
+                <ion-label class="titulo">Cerrar sesión</ion-label>
+            </ion-item>
+        </ion-menu-toggle>
+    </ion-footer>
+</ion-menu>
+
+<ion-router-outlet id="menu-content"></ion-router-outlet>

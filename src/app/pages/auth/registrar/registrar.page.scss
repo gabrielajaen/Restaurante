@@ -1,0 +1,52 @@
+.background-image {
+    background: url('https://firebasestorage.googleapis.com/v0/b/tallerfirebase-130d0.appspot.com/o/fondo-abstracto-amarillo-forma-curva_573652-1419-removebg-preview.png?alt=media&token=6417f19f-330a-44c9-9d2b-6bff019d7d89') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit {
+    --background: none;
+    background: linear-gradient(45deg, #ffdb63, #fdec8a);
+    --background-activated: linear-gradient(45deg, #d4a631, #b5892b);
+    --background-focused: linear-gradient(45deg, #d4a631, #b5892b);
+    --background-hover: linear-gradient(45deg, #d4a631, #b5892b);
+    color: #070707;
+    border-radius: 40px;
+    font-size: 17px;
+    margin: 10px auto;
+    /* Centramos los botones */
+}
+
+.validators {
+    color: var(--ion-color-danger);
+    font-size: 15px;
+    text-align: center;
+}
+
+.form-container {
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    min-height: 500px;
+    /* Para que el contenedor no cambie de tamaño */
+}
+
+ion-content {
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Ajusta según necesites */
+}

@@ -1,20 +1,193 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+    <ion-toolbar>
+        <!--<ion-title>SABOR LATINO</ion-title>-->
+        <ion-buttons slot="start">
+            <ion-menu-button menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let img of images">
+                <img [src]="img">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <br>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div class="headers-text-wrap ">
+        <div>
+            <ion-row class="ion-text-center ">
+                <ion-col size="12 ">
+                    <h1 class="header1 ">SABOR LATINO <br>RESTAURANT</h1>
+                </ion-col>
+            </ion-row>
+
+            <!-- Header 2 -->
+            <ion-row class="ion-text-center ">
+                <ion-col size="12 ">
+                    <p class="header2 ">
+                        ¡Bienvenido a nuestra aplicación! Descubre y disfruta de los sabores únicos de nuestro restaurante desde la comodidad de tu hogar. Explora nuestro menú y realiza tu pedido fácilmente. Estamos aquí para hacer que cada comida sea una experiencia memorable.
+                    </p>
+                </ion-col>
+            </ion-row>
+
+            <!-- Boton  
+          <div>
+              <ion-button class="boton " color="#856d1e ">
+                  Ver platos disponibles
+              </ion-button>
+
+          </div> -->
+
+        </div>
+    </div>
+
+
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6">
+                <div class="grid-item img-desc">
+                    <img style="border-radius: 18px;" src="https://api.grandetable.com.ec/img/blogs/23-Comida-ecuatoriana-descubre-un-abanico-de-platos-de-norte-a-sur.jpg" alt="">
+                </div>
+            </ion-col>
+            <ion-col size="6" style="background-color: rgb(255, 204, 65); border-radius: 18px; ">
+                <div class="grid-item ">
+                    <h2>COMIDA <br> ECUATORIANA</h2>
+                    <div class="linea-separadora"></div>
+                    <p class="texto-img">Explora la rica tradición culinaria ecuatoriana con nuestra selección de platos auténticos que capturan los sabores únicos de la región.</p>
+                    <div style="text-align: center;">
+                        <ion-icon class="icon-des" name="call"></ion-icon>
+                        <ion-icon class="icon-des" name="location"></ion-icon>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="6" style="background-color: rgb(255, 204, 65); border-radius: 18px; ">
+                <div class="grid-item">
+                    <h2>COMIDA <br> RÁPIDA</h2>
+                    <div class="linea-separadora"></div>
+                    <p class="texto-img">Disfruta del sabor de nuestras opciones de comida rápida, perfectas para satisfacer tus antojos de manera rápida y deliciosa.</p>
+                    <div style="text-align: center;">
+                        <ion-icon class="icon-des" name="call"></ion-icon>
+                        <ion-icon class="icon-des" name="location"></ion-icon>
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6">
+                <div class="grid-item  img-desc">
+                    <img style="border-radius: 18px;" src="https://eldiariony.com/wp-content/uploads/sites/2/2021/11/Comida-ra%CC%81pida-y-diabetes.jpg?w=4096" alt="">
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+    <div class="headers-text-wrap ">
+        <div>
+            <ion-row class="ion-text-center ">
+                <ion-col size="12 ">
+                    <h1 class="header11 ">BENEFICIOS DE USAR NUESTRA APP</h1>
+                </ion-col>
+            </ion-row>
+
+            <ion-grid class="volteada">
+                <ion-row>
+                    <ion-col class="tam" size="6">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/783/783159.png" alt="Comida Ecuatoriana">
+
+                                    <h2>COMODIDAD</h2>
+                                </div>
+                                <div class="card-back">
+
+                                    <p>Nuestra app está diseñada para ofrecerte una experiencia de usuario intuitiva y sencilla</p>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                    <ion-col class="tam" size="6">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1405/1405021.png" alt="Comida Rápida">
+                                    <h2>VARIEDAD DE OPCIONES</h2>
+                                </div>
+                                <div class="card-back">
+
+                                    <p>Explora una amplia gama de platos, desde comidas tradicionales hasta opciones modernas y saludables.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+
+            <!-- Boton  
+          <div>
+              <ion-button class="boton " color="#856d1e ">
+                  Ver platos disponibles
+              </ion-button>
+
+          </div> -->
+
+        </div>
+    </div>
+
+    <ion-grid>
+        <ion-row class="gale1">
+            <ion-col class="galeria" size="7"><img class="img-gal" src="https://trexperienceperu.com/sites/default/files/2024-05/ceviche.jpg"></ion-col>
+            <ion-col class="galeria" size="5"><img class="img-gal" src="https://bucanero.restaurant/wp-content/uploads/2013/06/20.1-Corvina-en-Salsa-de-Mariscos-550x366.png"></ion-col>
+        </ion-row>
+        <ion-row class="gale1">
+            <ion-col class="galeria" size="4"><img class="img-gal2" src="https://www.harinaselecta.cl/img/blog/almuerzos-faciles-rapidos.webp"></ion-col>
+            <ion-col class="galeria" size="8"><img class="img-gal2" src="https://firebasestorage.googleapis.com/v0/b/tallerfirebase-130d0.appspot.com/o/mas%20platos.jpg?alt=media&token=03f40460-c069-40be-bb4d-e09f3cfe1714"></ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
+    <ion-grid style="margin-top: none;">
+        <h2 class="h23">SERVICIOS</h2>
+        <ion-row>
+            <ion-col size="6" size-md="3" class="team-member-wrap">
+                <div class="team-member">
+                    <div class="team-image" style="background-image: url('https://images.prismic.io/simpliroute/6e1ca6a6-9fa9-488b-a9d4-bbb173865804_home+delivery.jpg?auto=compress%2Cformat&fit=max&w=1920&q=100');"></div>
+                    <div class="team-details">
+                        <h4 class="service-name">DELIVERY</h4>
+                        <div class="linea-separadora2"></div>
+                        <p>En nuestra aplicación, ofrecemos un servicio de delivery rápido y confiable para que puedas disfrutar de tus platos favoritos sin salir de casa. <br> <br></p>
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="6" size-md="3" class="team-member-wrap">
+                <div class="team-member">
+                    <div class="team-image" style="background-image: url('https://www.ikusi.com/mx/wp-content/uploads/sites/2/2022/06/post_thumbnail-289e18da12747f8426b50d270492e8e7.jpeg')"></div>
+                    <div class="team-details">
+                        <h4 class="service-name">SERVICIO AL CLIENTE</h4>
+                        <div class="linea-separadora2"></div>
+                        <p>Nuestro equipo está siempre disponible para ayudarte con cualquier consulta o problema que puedas tener durante tu experiencia de pedido.</p>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
 </ion-content>
+
+<app-wss></app-wss>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>
+        </ion-title>
+    </ion-toolbar>
+</ion-footer>

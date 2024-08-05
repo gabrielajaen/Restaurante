@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>ESTADISTICAS</ion-title>
+        <ion-buttons slot="start">
+            <ion-menu-button menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <ion-grid>
+        <ion-row>
+            <!-- Tarjeta de Usuario con Más Compras -->
+            <ion-col size="6">
+                <ion-card class="c1">
+                    <ion-card-header>
+                        <ion-card-title>Usuario con Más Compras</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <p>{{ mostPurchasingUser }}</p>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+            <!-- Tarjeta de Ganancias Totales -->
+            <ion-col size="6">
+                <ion-card class="c2">
+                    <ion-card-header>
+                        <ion-card-title>Ganancias Totales</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <p> {{ totalEarnings | currency: 'USD' }}</p>
+
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!-- Gráfico de Barras -->
+    <div class="chart-container" id="bar-chart-container">
+        <apx-chart [series]="barChartOptions.series" [chart]="barChartOptions.chart" [xaxis]="barChartOptions.xaxis" [yaxis]="barChartOptions.yaxis" [title]="barChartOptions.title" [plotOptions]="barChartOptions.plotOptions" [colors]="barChartOptions.colors"
+            (chartInit)="initializeBarChart($event)">
+        </apx-chart>
+    </div>
+
+    <!-- Gráfico de Pastel -->
+    <div id="pie-chart-container">
+        <apx-chart [series]="pieChartOptions.series" [chart]="pieChartOptions.chart" [labels]="pieChartOptions.labels" [title]="pieChartOptions.title" [dataLabels]="pieChartOptions.dataLabels" [colors]="pieChartOptions.colors" (chartInit)="initializePieChart($event)">
+        </apx-chart>
+    </div>
+</ion-content>

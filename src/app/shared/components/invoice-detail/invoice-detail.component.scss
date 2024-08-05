@@ -1,0 +1,131 @@
+ion-card {
+    border-radius: 30px;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+}
+
+ion-card-header {
+    margin: 0px;
+    padding: 0px;
+}
+
+.custom-close-button {
+    --background: transparent;
+    /* Color de fondo del botón */
+    --color: #080707;
+    /* Color del texto del botón */
+    --border: none;
+    /* Quitar el borde si es necesario */
+}
+
+.custom-toolbar {
+    --background: #facc37;
+    color: #000;
+}
+
+ion-card-title {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.invoice-label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    /* Ajusta el margen según sea necesario */
+}
+
+.invoice-id {
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+ion-card-header {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+h3 {
+    margin-top: 5px;
+    font-size: 20px;
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+span {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 5px;
+}
+
+ion-img {
+    width: 200px;
+    border-radius: 100%;
+    margin-left: 24%;
+    /* O cualquier tamaño que necesites para la imagen */
+}
+
+.div {
+    box-shadow: 8px 8px 8px 0px #7fb3d1c2;
+    background: rgb(216, 236, 247);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+ion-label {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0px;
+    padding-left: 27px;
+    color: #000;
+}
+
+ion-list {
+    margin: 0px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border-color: #000;
+}
+
+
+/* Asegúrate de que los estilos están en el archivo CSS asociado a tu componente */
+
+.product-item {
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0;
+}
+
+.product-item ion-grid {
+    --ion-grid-padding: 0;
+}
+
+.product-item ion-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-item ion-col {
+    padding: 0;
+}
+
+.header-row {
+    font-weight: bold;
+    border-bottom: 2px solid #575655;
+    /* Línea debajo de los encabezados */
+    background-color: #facc37;
+    /* Fondo para los encabezados */
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.text-end {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,64 @@
+<app-header [showMenu]="true" title="Panel"></app-header>
+
+<!--Agregar Nuevo producto-->
+<ion-content>
+    <!-- Lista de productos -->
+    <ion-list *ngIf="!loading">
+        <ion-item-sliding class="product-item" *ngFor="let p of products">
+            <ion-item>
+                <ion-avatar slot="start">
+                    <img class="imagen" [src]="p.imagen" />
+                </ion-avatar>
+                <ion-label>
+                    <h2 class="name">{{ p.nombre }}</h2>
+                    <p class="data">
+                        <strong>Descripción:</strong> {{ p.detalle }}<br />
+                        <strong>Precio:</strong> {{ p.precio | currency: 'USD' }}<br />
+                        <strong>Categoria:</strong> {{ p.categoria }}
+                    </p>
+                </ion-label>
+            </ion-item>
+            <!-- Opciones -->
+            <ion-item-options>
+                <!-- Editar -->
+                <ion-item-option class="option-btn-edit" (click)="addUpdateProducto(p)">
+                    <ion-icon class="option-btn" name="create-outline"></ion-icon>
+                </ion-item-option>
+                <!-- Eliminar -->
+                <ion-item-option (click)="confirmDeleteProduct(p)" color="danger">
+                    <ion-icon class="option-btn" name="trash-outline"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+
+    <!-- Loading -->
+    <ion-list *ngIf="loading">
+        <ion-item class="product-item" *ngFor="let p of [1, 1, 1, 1, 1, 1, 1]">
+            <ion-avatar slot="start">
+                <ion-skeleton-text animated style="width: 100%; height: 100%;"></ion-skeleton-text>
+            </ion-avatar>
+            <ion-label>
+                <h2>
+                    <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                </h2>
+                <p>
+                    <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+                </p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+
+    <!-- No hay productos -->
+    <div *ngIf="!loading && !products.length" class="empty">
+        <ion-icon name="shield-outline"></ion-icon>
+        <h3>No hay productos disponibles</h3>
+    </div>
+
+    <!-- Botón para agregar producto -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button class="agregar" (click)="addUpdateProducto()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

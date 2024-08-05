@@ -1,0 +1,30 @@
+ion-avatar {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.col {
+    --background: rgb(248, 184, 46);
+    color: black;
+    font-size: 16px;
+}
+
+.photo-btn {
+    position: relative;
+    bottom: 25px;
+}
+
+ion-item {
+    --padding-top: 15px;
+}
+
+.empty-icon {
+    font-size: 140px;
+    opacity: 30%;
+}
+
+.icon {
+    color: rgb(214, 159, 7);
+    font-size: 40px;
+}

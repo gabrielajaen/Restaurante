@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button style="font-size: 30px;"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Carrito</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h3></h3>
+
+    <!-- ITEMS -->
+    <ng-container *ngIf="carItems$ | async as carItems">
+        <ion-list *ngIf="carItems.length > 0; else loading">
+            <h3 class="title">Tus ordenes</h3>
+            <ion-item-sliding *ngFor="let item of carItems">
+                <ion-item>
+                    <app-carrito-items [item]="item" (increase)="onIncrease(item)" (decrease)="onDecrease(item)"></app-carrito-items>
+                </ion-item>
+                <ion-item-options side="end">
+                    <ion-item-option (click)="removeCarrito(item)">
+                        <ion-icon name="trash-outline" size="large" color="danger"></ion-icon>
+                    </ion-item-option>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+
+        <ion-grid style="margin-left: 10px;">
+            <ion-row>
+                <ion-col size="6">
+                    <app-button *ngIf="carItems.length > 0">
+                        Total: <span><sup>$</sup>{{ totalFin$ | async | number:'1.2' }}</span>
+                    </app-button>
+                </ion-col>
+                <ion-col size="6">
+                    <div *ngIf="carItems.length > 0">
+                        <ion-button class="pago-button" (click)="realizarPago()">Realizar Pago</ion-button>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <!-- Check Button -->
+
+
+
+    </ng-container>
+
+    <ng-template #loading>
+        <div class="empty-cart">
+            <ion-icon name="cart"></ion-icon>
+            <p>Your cart is empty</p>
+        </div>
+    </ng-template>
+</ion-content>
+
+<app-wss></app-wss>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-footer>

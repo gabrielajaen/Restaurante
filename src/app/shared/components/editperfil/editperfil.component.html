@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="dismiss()">
+                <ion-icon name="close" style="color: black;"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Editar Perfil</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="form-wrapper">
+        <form (ngSubmit)="updateProfile()" #form="ngForm">
+            <div class="imagen-perfil">
+                <ion-avatar>
+                    <img *ngIf="(userImage$ | async)" [src]="userImage$ | async" />
+                    <ion-icon *ngIf="!(userImage$ | async)" class="empty-icon" name="person-circle-outline"></ion-icon>
+                </ion-avatar>
+                <ion-button class="photo-btn col" (click)="takeImage()" mode="ios" size="small" shape="round">
+                    <ion-icon name="camera-outline"></ion-icon>
+                </ion-button>
+            </div>
+            <div class="colores">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <ion-item>
+                    <ion-label class="text" position="floating">Nombre de usuario</ion-label>
+                    <ion-input class="input" [(ngModel)]="user.nombre" name="nombre" required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label class="text" position="floating">Email</ion-label>
+                    <ion-input class="input readonly-input" value="Texto de solo lectura" readonly [(ngModel)]="user.email" name="email" type="email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label class="text" position="floating">Contraseña Actual</ion-label>
+                    <ion-input class="input" [(ngModel)]="currentPassword" name="currentPassword" type="password" required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label class="text" position="floating">Nueva Contraseña</ion-label>
+                    <ion-input class="input" [(ngModel)]="newPassword" name="newPassword" type="password" required></ion-input>
+                </ion-item>
+
+                <ion-button class="boton" type="submit" [disabled]="!form.valid">Actualizar Perfil</ion-button>
+
+            </div>
+
+        </form>
+    </div>
+</ion-content>

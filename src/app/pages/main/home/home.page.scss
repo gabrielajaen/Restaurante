@@ -1,0 +1,29 @@
+.agregar {
+    --background: rgb(248, 184, 46);
+    --color: black;
+    font-weight: lighter;
+}
+
+ion-avatar {
+    width: 55px;
+    height: 55px;
+}
+
+.name {
+    font-size: 22px;
+    color: rgb(12, 12, 11);
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.data {
+    padding-top: 10px;
+    font-size: 17px;
+    strong {
+        color: rgb(68, 66, 64);
+    }
+}
+
+.option-btn-edit {
+    background-color: rgb(230, 184, 36);
+}

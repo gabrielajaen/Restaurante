@@ -1,0 +1,140 @@
+ion-toolbar {
+    --background: #ecb80d;
+    color: rgb(8, 10, 12);
+    ion-title {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
+
+ion-menu-button {
+    color: #000000;
+}
+
+ion-button {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+}
+
+ion-icon {
+    color: #070404;
+}
+
+ion-content {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #4b4a4a;
+            margin: 0;
+        }
+        .avatar {
+            width: 35px;
+            height: 35px;
+            background-color: #facc37;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: hidden;
+            ion-img {
+                width: 90%;
+                height: 90%;
+            }
+        }
+    }
+    .categories {
+        display: flex;
+        /* Cambiado a flex para alinear horizontalmente */
+        overflow-x: auto;
+        /* Permite el desplazamiento horizontal */
+        /* Espacio entre los elementos */
+        /* Opcional: añade un poco de espacio en la parte superior e inferior */
+    }
+    .categories app-categorias {
+        flex: 0 0 auto;
+        /* Evita que los elementos se estiren */
+        width: 140px;
+        /* Ajusta el ancho según sea necesario */
+        height: 170px;
+        /* Ajusta la altura según sea necesario */
+        display: flex;
+        /* Alinea el contenido dentro del elemento */
+        justify-content: center;
+        /* Centra horizontalmente */
+        align-items: center;
+        /* Centra verticalmente */
+        overflow: hidden;
+        /* Asegura que el contenido no se desborde */
+    }
+    .categories::-webkit-scrollbar {
+        height: 8px;
+        /* Ancho del scrollbar en navegadores WebKit */
+    }
+    .categories::-webkit-scrollbar-thumb {
+        background: #888;
+        /* Color del scrollbar */
+        border-radius: 4px;
+        /* Bordes redondeados */
+    }
+    .categories::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        /* Color del scrollbar cuando el mouse está sobre él */
+    }
+    .list-header {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-weight: 700;
+        color: #4b4a4a;
+        font-size: 1.8rem;
+        margin-bottom: 1.3rem;
+        margin-top: 2;
+    }
+    .food-list {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+}
+
+.buscar {
+    margin-top: 0px;
+    background-color: #f4fa9e;
+    padding-bottom: 15px;
+    width: 95%;
+    margin: 10px;
+    border-radius: 10px;
+    h1 {
+        margin-top: 0px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 700;
+        padding-top: 20px
+    }
+    h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 16px;
+        margin: 0px;
+    }
+    img {
+        width: 60px;
+        height: 60px;
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+}
+
+ion-footer {
+    ion-toolbar {
+        --background: #eca51f;
+    }
+}

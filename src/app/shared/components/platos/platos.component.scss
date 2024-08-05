@@ -1,0 +1,65 @@
+.card {
+    width: 100%; // Puedes ajustar el ancho según sea necesario
+    max-width: 150px; // Tamaño máximo fijo para cada tarjeta
+    height: 200px; // Tamaño fijo para la altura
+    padding: 1rem;
+    background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 2.5rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); // Alinear elementos al principio del contenedor
+    ion-img {
+        width: 100%; // Ajusta la altura del contenido de la imagen
+        object-fit: cover; // Ajusta la imagen para que cubra el área sin distorsionar
+        border-radius: 2.5rem;
+    }
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; // Alinear texto a la izquierda
+        width: 100%;
+        height: 50%; // Ajusta la altura del contenido de la tarjeta
+        .title {
+            margin-top: 3px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1d1d1d;
+            margin-bottom: 1px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .subtitle {
+            font-size: 1em;
+            font-weight: 700;
+            color: #ecaa1b;
+            margin-top: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            sup {
+                margin-top: 0px;
+                font-size: 1rem;
+                margin-right: 2px;
+            }
+        }
+    }
+    .card-buttons {
+        position: absolute;
+        bottom: -0.5rem; // Mueve el botón fuera del recuadro hacia abajo
+        right: -0.5rem; // Mueve el botón fuera del recuadro hacia la derecha
+        display: flex;
+        justify-content: flex-end; // Alinea los botones a la derecha
+        ion-button {
+            --background: rgb(248, 218, 46);
+            font-weight: bold;
+            color: #0e0d0d;
+            width: 40px;
+            height: 40px;
+            --padding-start: 0;
+            --padding-end: 0;
+            --padding-top: 0;
+            --padding-bottom: 0;
+            border-radius: 50%; // Redondear el botón si lo deseas
+        }
+    }
+}

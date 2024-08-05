@@ -1,0 +1,21 @@
+ion-toolbar {
+    --background: #ecb80d;
+    color: rgb(8, 10, 12);
+    ion-title {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
+
+ion-icon {
+    font-size: 30px;
+    color: black;
+}
+
+.texto {
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    align-items: center;
+}

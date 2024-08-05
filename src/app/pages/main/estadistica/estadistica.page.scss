@@ -1,0 +1,48 @@
+.chart-container {
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+ion-toolbar {
+    --background: #ecb80d;
+    color: rgb(4, 5, 5);
+    ion-title {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        align-items: center;
+    }
+    ion-menu-button {
+        font-size: 30px;
+        color: #000000;
+    }
+}
+
+apx-chart {
+    width: 100%;
+    height: 100%;
+}
+
+ion-card {
+    margin: 20px;
+    text-align: center;
+}
+
+ion-card-title {
+    font-size: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: #000000;
+}
+
+.c1 {
+    background-color: #7dbce6;
+    margin: 0px
+}
+
+.c2 {
+    background-color: #8ef181;
+    margin: 0px;
+}

@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar class="custom-toolbar">
+        <ion-title>DETALLES FACTURA</ion-title>
+        <ion-buttons slot="end">
+            <ion-button class="custom-close-button" (click)="dismiss()">Cerrar</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-img src="https://firebasestorage.googleapis.com/v0/b/tallerfirebase-130d0.appspot.com/o/logorestaurante-removebg-preview.png?alt=media&token=0610d86f-a8b5-440a-9089-3c0875e50e2d"></ion-img>
+
+            <!--<ion-card-title>
+                <span class="invoice-label">Nº:</span>
+                <span class="invoice-id">{{ invoice.id }}</span>
+            </ion-card-title>-->
+        </ion-card-header>
+        <ion-card-content>
+            <div class="div">
+                <h3><span>Usuario: </span> {{ getUserName(invoice.userId) }}</h3>
+                <h3><span>Total:</span> {{ invoice.totalAmount | currency }}</h3>
+                <h3><span>Fecha:</span> {{ invoice.date | date:'short' }}</h3>
+
+            </div>
+            <br>
+            <ion-label>PRODUCTOS COMPRADOS</ion-label>
+            <ion-list>
+                <ion-item class="product-item">
+                    <ion-grid>
+                        <!-- Encabezado de la tabla -->
+                        <ion-row class="header-row">
+                            <ion-col size="6">
+                                Nombre
+                            </ion-col>
+                            <ion-col size="3">
+                                Cantidad
+                            </ion-col>
+                            <ion-col size="3">
+                                Precio
+                            </ion-col>
+                        </ion-row>
+                        <!-- Fila de datos de productos -->
+                        <ion-row class="product-item" *ngFor="let product of invoice.products">
+                            <ion-col size="6" class="text-end">
+                                {{ product.nombre }}
+                            </ion-col>
+                            <ion-col size="3" class="text-end">
+                                {{ product.cantidad }}
+                            </ion-col>
+                            <ion-col size="3" class="text-end">
+                                {{ product.precio | currency }}
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-item>
+            </ion-list>
+
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>

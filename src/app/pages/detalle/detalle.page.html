@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+    <div class="header">
+        <ion-buttons slot="start">
+            <ion-button routerLink="/inicio">
+                <ion-icon slot="icon-only" color="light" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="start">
+            <ion-button>
+                <ion-icon slot="icon-only" color="light" name="heart"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </div>
+
+    <!-- DETALLE -->
+    <div class="card" *ngIf="plato">
+        <div class="image">
+            <ion-img [src]="plato.imagen"></ion-img>
+        </div>
+
+        <div class="card-title">
+            <h1 class="ion-no-margin">{{plato.nombre}}</h1>
+            <p class="ion-no-margin"><sup>$</sup> {{plato.precio | number:'1.2'}}</p>
+        </div>
+
+        <div class="about">
+            <h1>Detalles del plato</h1>
+            <p>{{plato.detalle}}</p>
+        </div>
+
+        <app-button class="add-to-cart" (click)="addCarrito()">Añadir a Carrito</app-button>
+    </div>
+
+    <div *ngIf="!plato">
+        <p>Cargando plato...</p>
+    </div>
+</ion-content>

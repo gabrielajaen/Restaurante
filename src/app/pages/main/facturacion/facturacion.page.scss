@@ -1,0 +1,108 @@
+ion-content {
+    --background: #facc37;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem 0.5rem;
+    }
+    .card {
+        height: 75%;
+        width: 100%;
+        background: white;
+        position: absolute;
+        bottom: 0;
+        border-radius: 3rem 3rem 0 0;
+        padding-top: 7rem;
+        overflow-y: auto;
+    }
+    .img {
+        z-index: 10000;
+        margin-top: 0px;
+    }
+    img {
+        width: 700px;
+        height: 225px;
+    }
+}
+
+.cart-item {
+    background: rgb(216, 236, 247);
+    padding: 0.8rem 1rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1rem auto;
+    /* Ajusta el margen superior e inferior */
+    box-shadow: 8px 8px 8px 0px #7fb3d1c2;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-item:hover {
+    transform: scale(1.05);
+    /* Aumenta el tamaño al pasar el mouse */
+}
+
+.cart-item .image {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    overflow: hidden;
+    left: 5%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    /* Asegura que la imagen no se salga del contenedor */
+}
+
+.cart-item .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.cart-item .descripcion {
+    flex: 1;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart-item .descripcion h3 {
+    margin-top: 0px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cart-item .descripcion p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+    color: rgb(97, 96, 94);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cart-item .descripcion .f {
+    font-size: 1.2rem;
+    color: rgb(133, 132, 131);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cart-item .actions {
+    margin-top: 25px;
+}
+
+.cart-item .actions ion-button {
+    --border-radius: 40px;
+    --background: #fcd03f;
+    --box-shadow: 0px 2px 10px rgb(241, 149, 28);
+    --color: #070606;
+    --padding-bottom: 0;
+    --padding-end: 0;
+    --padding-start: 0;
+    --padding-top: 0;
+    height: 45px;
+    width: 45px;
+}

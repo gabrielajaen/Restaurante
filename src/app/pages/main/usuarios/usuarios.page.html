@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>usuarios</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">usuarios</ion-title>
+        </ion-toolbar>
+    </ion-header>
+</ion-content>
+
+
+<ion-footer class="ion-no-border safe-p-bottom">
+    <ion-menu-toggle auto-hide="false">
+        <ion-item (click)="cerrarsesion()" lines="none">
+            <ion-icon slot="start" name="log-out-outline"></ion-icon>
+            <ion-label>Cerrar sesion</ion-label>
+        </ion-item>
+    </ion-menu-toggle>
+</ion-footer>

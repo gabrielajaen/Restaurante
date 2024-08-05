@@ -1,0 +1,78 @@
+ion-content {
+    --background: rgb(248, 218, 46);
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0.5rem;
+        ion-button {
+            height: 60px;
+            width: 60px;
+            ion-icon {
+                font-size: 2rem;
+            }
+        }
+    }
+    .card {
+        height: 75%;
+        width: 100%;
+        background: white;
+        position: absolute;
+        bottom: 0;
+        border-radius: 3rem 3rem 0 0;
+        padding: 2rem;
+        .image {
+            position: absolute;
+            top: -6.5rem;
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .card-title {
+            margin-top: 35%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            h1 {
+                font-weight: 700;
+                font-size: 2.1rem;
+            }
+            p {
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: #e7c115;
+                sup {
+                    font-size: 1.2rem;
+                    margin-right: -0.5rem;
+                }
+            }
+        }
+        .about {
+            margin-bottom: 2.5rem;
+            h1 {
+                font-weight: 600;
+            }
+            p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                color: rgb(80, 79, 72);
+            }
+        }
+    }
+    .add-to-cart {
+        position: fixed; // Fija el botón en la parte inferior de la pantalla
+        bottom: 0;
+        left: 0;
+        width: 300px; // Ocupa todo el ancho de la pantalla
+        // Color de fondo del botón (puedes ajustarlo)
+        color: #f3f3f3; // Color del texto del botón
+        font-weight: 700;
+        text-align: center;
+        margin-left: 10%;
+        margin-bottom: 6%;
+        --padding-start: 0;
+        --padding-end: 0;
+        --padding-top: 1rem; // Ajusta el padding del botón según sea necesario
+        --padding-bottom: 1rem;
+    }
+}

@@ -1,0 +1,32 @@
+<app-header [showMenu]="true" title="Facturación"></app-header>
+<ion-content [fullscreen]="true">
+    <div class="header">
+        <div class="img">
+            <img src="https://firebasestorage.googleapis.com/v0/b/tallerfirebase-130d0.appspot.com/o/image-removebg-preview%20(1).png?alt=media&token=5c18a4bd-c7c4-497e-8ffb-b0332ae031c8" alt="">
+        </div>
+    </div>
+
+    <!-- DETALLE -->
+    <div class="card">
+        <div *ngFor="let invoice of invoiceData" class="cart-item">
+            <div class="image">
+                <img src="https://cdn-icons-png.flaticon.com/512/950/950258.png" alt="Imagen de Factura" />
+            </div>
+
+            <div class="descripcion">
+                <h3>{{ getUserName(invoice.userId) }}</h3>
+                <!-- Muestra el ID del documento o algún otro identificador -->
+                <p>Total: {{ invoice.totalAmount | currency }}</p>
+                <p class="f">{{ invoice.date | date:'short' }}</p>
+            </div>
+
+            <div class="actions">
+                <ion-buttons>
+                    <ion-button (click)="openInvoiceDetail(invoice)">
+                        <ion-icon name="eye-sharp"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </div>
+        </div>
+    </div>
+</ion-content>
